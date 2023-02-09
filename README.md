@@ -3,6 +3,7 @@
 פרויקט חידת נתיב הזהב
 
 כדי להריץ:
+
 1.run exe file
 2.open html file in browser
 enjoy.
