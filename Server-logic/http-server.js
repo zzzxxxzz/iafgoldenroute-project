@@ -97,6 +97,7 @@ function calculator(carriage_mass)
   let full_mass = carriage_mass + MASS_WITHOUT_CARRIAGE;
   let time_calculated = time(TAKEOFF_SPEED, acceleration(ENGINE_POWER, full_mass)).toFixed(2);
   let distance_calculated = distance(acceleration(ENGINE_POWER, full_mass), time_calculated).toFixed(2);
+  console.log(distance_calculated)
   let overloaded_mass = 0;
   if(time_calculated > TIME_GIVEN){
     overloaded_mass = (carriage_mass - MAX_MASS).toFixed(2);
@@ -108,7 +109,7 @@ function acceleration(F, m) {
   return F / m;
 }
 function distance(a, t) {
-  return 0.5 * a * t^2;
+  return 0.5 * a * t*t;
 }
 function time(V, a) {
   return V / a;
